@@ -154,6 +154,7 @@ const Orderbook: React.FC<OrderbookProps> = ({ symbol }) => {
   // Function to check connection status and trigger reconnect if needed
   const checkConnectionStatus = useCallback(() => {
     const now = Date.now();
+
     if (
       now - lastMessageTime.current > 10000 &&
       connectionStatus === 'connected'
